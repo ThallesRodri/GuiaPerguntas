@@ -1,0 +1,25 @@
+<%- include ('partials/header') %>
+<body>
+    <%- include ('partials/navbar') %>
+    <!-- container é um recurso do bootstrap que não deixa o conteúdo grudado nas bordas, deixa centralizado -->
+    <div class="container">
+        <div class="card" id="formulario-pergunta">
+            <div class="card-header">
+                <h3>Realizar pergunta</h3>
+            </div>
+            <div clas="card-body">
+                <form style="margin-left: 20px" method="post" action="/salvarpergunta">
+                    <br>
+                    <label>Título</label>
+                    <input type="text" placeholder="Título" class="form-control" name="titulo">
+                    <br>
+                    <label>Descrição</label>
+                    <textarea placeholder="Digite sua pergunta aqui" class="form-control" name="descricao"></textarea>
+                    <br>
+                    <button type="submit" class="btn btn-success" style="margin-bottom:10px">Publicar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include ('partials/footer') %>
